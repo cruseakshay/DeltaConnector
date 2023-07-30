@@ -1,0 +1,4 @@
+streamlit>=1.22
+toml
+databricks-sql-connector
+pandas
