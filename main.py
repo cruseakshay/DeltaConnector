@@ -12,7 +12,7 @@ st.title('DataBricks SQL Connection')
 """
 Ensure Connection configuration - Secrets. [Refer.](https://docs.streamlit.io/streamlit-community-cloud/get-started/deploy-an-app/connect-to-data-sources/secrets-management)
 """
-st.image("./streamlit_secrets.png")
+st.image("https://github.com/cruseakshay/DeltaConnector/blob/2f4e050e71e3b5057cd281220974fa51d97a9762/streamlit_secrets.png")
 
 with st.echo():
     conn = st.experimental_connection('db_sql', type=DeltaConnection)
