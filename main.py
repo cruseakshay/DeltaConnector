@@ -13,9 +13,16 @@ st.title('DataBricks SQL Connection')
 Ensure Connection configuration - Secrets. [Refer.](https://docs.streamlit.io/streamlit-community-cloud/get-started/deploy-an-app/connect-to-data-sources/secrets-management)
 """
 htp="https://raw.githubusercontent.com/cruseakshay/DeltaConnector/main/streamlit_secrets.png"
-st.image(htp, caption= 'configuration', width=350)
+st.image(htp, caption= 'configuration')
+
+"""
+If secrets are configured, you will get the following.
+"""
+_htp="https://raw.githubusercontent.com/cruseakshay/DeltaConnector/main/success_app.png"
+st.image(_htp, caption= 'success_app')
 
 with st.echo():
     conn = st.experimental_connection('db_sql', type=DeltaConnection)
     df = conn.query('select * from database.table limit 10', ttl=timedelta(minutes=10))
     st.dataframe(df)
+    
